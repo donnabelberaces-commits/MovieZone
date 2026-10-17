@@ -1,8 +1,4 @@
 
-/* =====================================
-   MOVIEZONE - DARK GOLD CINEMATIC THEME
-   ===================================== */
-
 :root {
     --bg: #080b10;
     --panel: #111720;
@@ -91,7 +87,7 @@ p {
     font-size: 14px;
 }
 
-/* Search and filters */
+
 
 .search-form {
     display: flex;
@@ -129,7 +125,7 @@ textarea:focus {
     min-width: 175px;
 }
 
-/* Buttons */
+
 
 button,
 .btn {
@@ -153,7 +149,7 @@ button:hover,
     transform: translateY(-1px);
 }
 
-/* Movie collection */
+
 
 .movie-grid {
     display: grid;
@@ -204,7 +200,7 @@ button:hover,
     margin-top: 4px;
 }
 
-/* Movie details page */
+
 
 .container > .movie-card {
     display: flex;
@@ -245,7 +241,7 @@ button:hover,
     color: var(--gold);
 }
 
-/* Admin forms and panels */
+
 
 .form-box {
     background: var(--panel);
@@ -300,7 +296,7 @@ table img {
     border-radius: 5px;
 }
 
-/* Footer */
+
 
 footer {
     text-align: center;
@@ -310,7 +306,7 @@ footer {
     border-top: 1px solid var(--border);
 }
 
-/* Responsive layout */
+
 
 @media (max-width: 700px) {
     nav {
@@ -386,10 +382,6 @@ footer {
 
 
 
-/* =====================================
-   MOVIEZONE HERO BANNER
-   ===================================== */
-
 .hero,
 .hero-banner {
     position: relative;
@@ -402,7 +394,7 @@ footer {
     background-color: #080b10;
 }
 
-/* Background image */
+
 .hero-backdrop {
     position: absolute;
     inset: 0;
@@ -414,7 +406,7 @@ footer {
     filter: none;
 }
 
-/* Overlay: dark sa left, clearer sa right */
+
 .hero-shade,
 .hero-overlay {
     position: absolute;
@@ -430,7 +422,7 @@ footer {
     pointer-events: none;
 }
 
-/* Banner text */
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -527,3 +519,168 @@ footer {
         font-size: 14px;
     }
 }
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.hero-banner {
+    animation: fadeUp 0.8s ease both;
+}
+
+.hero-content > * {
+    animation: heroReveal 0.7s ease both;
+}
+
+.hero-content > *:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+.hero-content > *:nth-child(3) {
+    animation-delay: 0.22s;
+}
+
+.hero-content > *:nth-child(4) {
+    animation-delay: 0.32s;
+}
+
+
+.movie-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    animation: fadeUp 0.6s ease both;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+    border-color: var(--gold);
+}
+
+.movie-card img {
+    transition: transform 0.45s ease;
+}
+
+.movie-card:hover img {
+    transform: scale(1.05);
+}
+
+
+.btn,
+button,
+.hero-btn {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.btn:hover,
+button:hover,
+.hero-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+nav a {
+    transition: color 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* Golden glow for movie cards */
+.movie-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 215, 0, 0.12);
+    border-radius: 14px;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.movie-card img {
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+.movie-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: #ffd700;
+    box-shadow:
+        0 0 8px rgba(255, 215, 0, 0.35),
+        0 0 22px rgba(255, 193, 7, 0.25),
+        0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.movie-card:hover img {
+    transform: scale(1.07);
+    filter: brightness(1.15) saturate(1.12);
+}
+
+
+.movie-card h3 {
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+.movie-card:hover h3 {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.35);
+}
+
+
+.movie-card .btn:hover {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+

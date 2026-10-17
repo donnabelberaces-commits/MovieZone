@@ -228,7 +228,7 @@ $trending = array_values(array_filter($movies, function ($movie) use ($featured)
         }
 
         
-/* Final banner fix */
+
 .hero {
     position: relative !important;
     min-height: 465px !important;
@@ -291,7 +291,7 @@ $trending = array_values(array_filter($movies, function ($movie) use ($featured)
 
 <nav>
     <a href="index.php" class="logo" style="margin-left:0">
-        🎬 Next Flick
+        🎬 NextFlick
     </a>
 
     <div>

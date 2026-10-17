@@ -64,7 +64,7 @@ $message = "";
 $error = "";
 $editMovie = null;
 
-// Add or update movie
+
 if ($_SERVER["REQUEST_METHOD"] === "POST"
     && isset($_POST["save_movie"])) {
 
@@ -156,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"
     }
 }
 
-// Delete movie
+
 if ($_SERVER["REQUEST_METHOD"] === "POST"
     && isset($_POST["delete_movie"])) {
 
@@ -174,7 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"
     exit;
 }
 
-// Load movie to edit
+
 if (isset($_GET["edit"])) {
     $id = (int)$_GET["edit"];
 
